@@ -1,0 +1,14 @@
+<div class="beer-container">
+
+ 
+
+  <% if (beer.food_pairing) { %>
+    <p><strong>Food Pairing:</strong> <%= beer.food_pairing.join(', ') %></p>
+  <% } %>
+  <% if (beer.brewers_tips) { %>
+    <p><strong>Brewer Tips:</strong> <%= beer.brewers_tips %></p>
+  <% } %>
+</div>
+
+
+

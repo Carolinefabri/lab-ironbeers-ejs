@@ -1,0 +1,15 @@
+<h1>All Beers</h1>
+<p>This is the beers page content.</p>
+
+<% beers.forEach(beer => { %>
+  <div class="beer-container">
+    <h3><a href="/beers/<%= beer.id %>"><%= beer.name %></a></h3>
+    <img src="<%=beer.image_url%> " style="width: 100px; height: 200px;">
+
+    <%- include('partials/beer', { beer: beer }) %>
+  
+    <p><strong>Tagline:</strong> <%= beer.tagline %></p>
+    <p><strong>Description:</strong> <%= beer.description %></p>
+    <hr>
+  </div>
+<% }) %>
